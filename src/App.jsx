@@ -69,11 +69,11 @@ const App = () => {
   {/* <ForwardRefs /> */}
   {/* <UseId /> */}
   {/* <ParentComponent /> */}
-  {/* <BioProvider >
+  <BioProvider >
   <Home />
   <About />
   <Services />
-  </BioProvider> */}
+  </BioProvider>
 
   
   </section> 
