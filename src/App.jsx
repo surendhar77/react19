@@ -29,9 +29,10 @@
 // import { ReactUseEffect } from "./components/hooks/useEffect";
 // import ContactForm from "./components/hooks/useState/ContactForm";
 // import LoginForm from "./components/hooks/useState/LoginForm";
-
-import { UseId } from "./components/hooks/UseId";
+// import { UseId } from "./components/hooks/UseId";
 // import ForwardRefs from "./components/hooks/useRefs/ForwardRefs";
+
+import { ParentComponent } from "./components/PropDrilling";
 
 // import { UseRef } from "./components/hooks/useRefs";
 
@@ -63,7 +64,8 @@ const App = () => {
   {/* <HarryPotterCharacter /> */}
   {/* <UseRef />  */}
   {/* <ForwardRefs /> */}
-  <UseId />
+  {/* <UseId /> */}
+  <ParentComponent />
   </section> 
 
 };
