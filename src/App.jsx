@@ -22,18 +22,18 @@
 // import {ControlledForm} from "./components/hooks/useState/Controlled";
 // import { RegistrationForm } from "./components/hooks/useState/Registeration";
 // import { RegistrationFormReact } from "./components/hooks/useState/RegistrationReact.jsx";
-
 // import HowNotToFetchApi from "./components/hooks/useEffect/HowNotToFetchApi";
-import HarryPotterCharacter from "./projects/HarryPotter/HarryPotterCharacter";
-
+// import HarryPotterCharacter from "./projects/HarryPotter/HarryPotterCharacter";
 // import CleanUp from "./components/hooks/useEffect/CleanUp";
-
 // import { Challenge } from "./components/hooks/useEffect/EffectChallenge";
-
 // import { ReactUseEffect } from "./components/hooks/useEffect";
-
 // import ContactForm from "./components/hooks/useState/ContactForm";
 // import LoginForm from "./components/hooks/useState/LoginForm";
+
+import { UseId } from "./components/hooks/UseId";
+// import ForwardRefs from "./components/hooks/useRefs/ForwardRefs";
+
+// import { UseRef } from "./components/hooks/useRefs";
 
 const App = () => {
   return <section className="container">
@@ -60,7 +60,10 @@ const App = () => {
   {/* <Challenge /> */}
   {/* <CleanUp /> */}
   {/* <HowNotToFetchApi />   */}
-  <HarryPotterCharacter />
+  {/* <HarryPotterCharacter /> */}
+  {/* <UseRef />  */}
+  {/* <ForwardRefs /> */}
+  <UseId />
   </section> 
 
 };
