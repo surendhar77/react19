@@ -31,10 +31,13 @@
 // import LoginForm from "./components/hooks/useState/LoginForm";
 // import { UseId } from "./components/hooks/UseId";
 // import ForwardRefs from "./components/hooks/useRefs/ForwardRefs";
-
-import { ParentComponent } from "./components/PropDrilling";
-
+// import { ParentComponent } from "./components/PropDrilling";
 // import { UseRef } from "./components/hooks/useRefs";
+
+import { BioProvider } from "./components/hooks/ContextAPI";
+import { About } from "./components/hooks/ContextAPI/About";
+import Home from "./components/hooks/ContextAPI/Home";
+import Services from "./components/hooks/ContextAPI/Services";
 
 const App = () => {
   return <section className="container">
@@ -65,7 +68,14 @@ const App = () => {
   {/* <UseRef />  */}
   {/* <ForwardRefs /> */}
   {/* <UseId /> */}
-  <ParentComponent />
+  {/* <ParentComponent /> */}
+  {/* <BioProvider >
+  <Home />
+  <About />
+  <Services />
+  </BioProvider> */}
+
+  
   </section> 
 
 };
