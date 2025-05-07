@@ -27,5 +27,6 @@ export const useBioContext = () =>{
     {
         throw new Error("Component must be Wrapped with BioProvider");
     }
+    
     return context;
 }
