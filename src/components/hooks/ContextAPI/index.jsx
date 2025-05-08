@@ -23,6 +23,7 @@ export const useBioContext = () =>{
     // const context = useContext(BioContext);
     const context = use(BioContext);
 
+    
     if(context === undefined)
     {
         throw new Error("Component must be Wrapped with BioProvider");
