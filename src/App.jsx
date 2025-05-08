@@ -37,10 +37,12 @@
 // import { About } from "./components/hooks/ContextAPI/About";
 // import Home from "./components/hooks/ContextAPI/Home";
 // import Services from "./components/hooks/ContextAPI/Services";
-// import"./index.css";
+// import ReactMemo from "./components/hooks/Memo/ReactMemo";
+// import MemoParentComponent from "./components/hooks/Memo/UseMemo";
+import UseCallback from "./components/hooks/Memo/UseCallback";
+import"./index.css";
 // import { ThemeProvider } from "./components/hooks/ContextAPI/DarkLight";
 // import { DarkLight } from "./components/hooks/ContextAPI/DarkLight";
-
 // import { ReducerComp } from "./components/hooks/UseReducer";
 
 
@@ -83,6 +85,9 @@ const App = () => {
 <DarkLight />
 </ThemeProvider > */}
 {/* <ReducerComp /> */}
+{/* <ReactMemo /> */}
+{/* <MemoParentComponent /> */}
+<UseCallback />
   </section> 
 
 };
