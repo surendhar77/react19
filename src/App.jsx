@@ -37,9 +37,11 @@
 // import { About } from "./components/hooks/ContextAPI/About";
 // import Home from "./components/hooks/ContextAPI/Home";
 // import Services from "./components/hooks/ContextAPI/Services";
-import"./index.css";
-import { ThemeProvider } from "./components/hooks/ContextAPI/DarkLight";
-import { DarkLight } from "./components/hooks/ContextAPI/DarkLight";
+// import"./index.css";
+// import { ThemeProvider } from "./components/hooks/ContextAPI/DarkLight";
+// import { DarkLight } from "./components/hooks/ContextAPI/DarkLight";
+
+// import { ReducerComp } from "./components/hooks/UseReducer";
 
 
 const App = () => {
@@ -77,10 +79,10 @@ const App = () => {
   <About />
   <Services />
   </BioProvider> */}
-<ThemeProvider >
+{/* <ThemeProvider >
 <DarkLight />
-</ThemeProvider >
-
+</ThemeProvider > */}
+{/* <ReducerComp /> */}
   </section> 
 
 };
