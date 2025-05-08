@@ -1,10 +1,10 @@
 /* This file contains global CSS styles that apply to the entire application. 
    It allows you to define styles that should be applied globally, affecting all components within the app. */
    @import "tailwindcss";
-/* Base rule */
+Base rule
 * {
   margin: 0;
-  /* padding: 0; */
+ padding: 0; 
   box-sizing: border-box;
   font-family: "Urbanist", sans-serif;
 }
@@ -34,9 +34,9 @@ a,
 label {
   font-size: 1.8rem;
   letter-spacing: 0.1rem;
-  /* color: var(--para-color); */
+  color: var(--para-color);
   line-height: 1.5;
-  /* font-weight: 400; */
+  font-weight: 400;
 }
 
 li {

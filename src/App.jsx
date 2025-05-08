@@ -33,11 +33,14 @@
 // import ForwardRefs from "./components/hooks/useRefs/ForwardRefs";
 // import { ParentComponent } from "./components/PropDrilling";
 // import { UseRef } from "./components/hooks/useRefs";
+// import { BioProvider } from "./components/hooks/ContextAPI";
+// import { About } from "./components/hooks/ContextAPI/About";
+// import Home from "./components/hooks/ContextAPI/Home";
+// import Services from "./components/hooks/ContextAPI/Services";
+import"./index.css";
+import { ThemeProvider } from "./components/hooks/ContextAPI/DarkLight";
+import { DarkLight } from "./components/hooks/ContextAPI/DarkLight";
 
-import { BioProvider } from "./components/hooks/ContextAPI";
-import { About } from "./components/hooks/ContextAPI/About";
-import Home from "./components/hooks/ContextAPI/Home";
-import Services from "./components/hooks/ContextAPI/Services";
 
 const App = () => {
   return <section className="container">
@@ -69,13 +72,15 @@ const App = () => {
   {/* <ForwardRefs /> */}
   {/* <UseId /> */}
   {/* <ParentComponent /> */}
-  <BioProvider >
+  {/* <BioProvider >
   <Home />
   <About />
   <Services />
-  </BioProvider>
+  </BioProvider> */}
+<ThemeProvider >
+<DarkLight />
+</ThemeProvider >
 
-  
   </section> 
 
 };
