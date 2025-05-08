@@ -1,5 +1,5 @@
 // import React from 'react'
-// import Netflixseries from "./components/NetflixSeries"; 
+// import Netflixseries from "./components/NetflixSeries";
 // combined export and import
 // import { Fragment } from "react";
 // import "./components/Netflix.css";
@@ -39,81 +39,133 @@
 // import Services from "./components/hooks/ContextAPI/Services";
 // import ReactMemo from "./components/hooks/Memo/ReactMemo";
 // import MemoParentComponent from "./components/hooks/Memo/UseMemo";
-import UseCallback from "./components/hooks/Memo/UseCallback";
-import"./index.css";
+// import UseCallback from "./components/hooks/Memo/UseCallback";
+// import"./index.css";
 // import { ThemeProvider } from "./components/hooks/ContextAPI/DarkLight";
 // import { DarkLight } from "./components/hooks/ContextAPI/DarkLight";
 // import { ReducerComp } from "./components/hooks/UseReducer";
 
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import {Home} from "./ReactRouter/Pages/Home";
+import About from "./ReactRouter/Pages/About";
+import {Movie} from "./ReactRouter/Pages/Movie";
+import {Contact} from "./ReactRouter/Pages/Contact";
+import AppLayout from "./ReactRouter/Pages/layout/AppLayout";
+import "./ReactRouter/css/index.css";
+import {ErrorPage} from "./ReactRouter/Pages/ErrorPage"
+import { NotFound } from "./ReactRouter/Pages/NotFound";
 
 const App = () => {
-  return <section className="container">
-    {/* <h1 className="card-heading"> List of Best Netflix Series</h1> */}
-  {/* <Netflixseries />   */}
-  {/* <EventHandling /> */}
-  {/* < EventProps  /> */}
-  {/* <EventPropagation  /> */}
-  {/* <State  /> */}
-  {/* <DerivedState /> */}
-  {/* <Sibling /> */}
-  {/* <LiftStateUp /> */}
-  {/* <ToggleSwitch /> */}
-  {/* <Todo /> */}
-  {/* <Keys /> */}
-  {/* <ShortCircuit /> */}
-  {/* <Counter />  */}
-  {/* <ControlledForm /> */}
-  {/* <RegistrationForm /> */}
-  {/* <RegistrationFormReact /> */}
-  {/* <LoginForm /> */}
-  {/* <ContactForm /> */}
-  {/* <ReactUseEffect />  */}
-  {/* <Challenge /> */}
-  {/* <CleanUp /> */}
-  {/* <HowNotToFetchApi />   */}
-  {/* <HarryPotterCharacter /> */}
-  {/* <UseRef />  */}
-  {/* <ForwardRefs /> */}
-  {/* <UseId /> */}
-  {/* <ParentComponent /> */}
-  {/* <BioProvider >
-  <Home />
-  <About />
-  <Services />
-  </BioProvider> */}
-{/* <ThemeProvider >
-<DarkLight />
-</ThemeProvider > */}
-{/* <ReducerComp /> */}
-{/* <ReactMemo /> */}
-{/* <MemoParentComponent /> */}
-<UseCallback />
-  </section> 
+  const router = createBrowserRouter([
+  {
+    path:'/',
+    element:<AppLayout />,
+    errorElement:<ErrorPage />,
+    children:[
+      {
+        path:"/",
+        element:<Home/>
+      },
+      {
+        path:"/about",
+        element:<About />
+      },
+      {
+        path:"/movie",
+        element:<Movie />
+      },   {
+        path:"/contact",
+        element:<Contact />
+      },
+      // {
+      //   path:"*",
+      //   element:<NotFound />
+      // },
+    ]
+  },
+     
+]);
+  return <RouterProvider router ={router} />
 
+// const router = createBrowserRouter(
+//   createRoutesFromElements(
+//     <>
+// {/* <Route path ="*" element ={ <ErrorPage/>} /> */}
+//       <Route path ="/" element ={ <Home />} />
+//       <Route path ="/about" element ={ <About />} />
+//       <Route path ="/contact" element ={ <Contact />} />
+//       <Route path ="/movie" element ={ <Movie />} />
+//     </>
+//   )
+// );
+// return <RouterProvider router ={router} />
+    // React components and hooks
+  //   return <section className="container">
+  //     {/* <h1 className="card-heading"> List of Best Netflix Series</h1> */}
+  //   {/* <Netflixseries />   */}
+  //   {/* <EventHandling /> */}
+  //   {/* < EventProps  /> */}
+  //   {/* <EventPropagation  /> */}
+  //   {/* <State  /> */}
+  //   {/* <DerivedState /> */}
+  //   {/* <Sibling /> */}
+  //   {/* <LiftStateUp /> */}
+  //   {/* <ToggleSwitch /> */}
+  //   {/* <Todo /> */}
+  //   {/* <Keys /> */}
+  //   {/* <ShortCircuit /> */}
+  //   {/* <Counter />  */}
+  //   {/* <ControlledForm /> */}
+  //   {/* <RegistrationForm /> */}
+  //   {/* <RegistrationFormReact /> */}
+  //   {/* <LoginForm /> */}
+  //   {/* <ContactForm /> */}
+  //   {/* <ReactUseEffect />  */}
+  //   {/* <Challenge /> */}
+  //   {/* <CleanUp /> */}
+  //   {/* <HowNotToFetchApi />   */}
+  //   {/* <HarryPotterCharacter /> */}
+  //   {/* <UseRef />  */}
+  //   {/* <ForwardRefs /> */}
+  //   {/* <UseId /> */}
+  //   {/* <ParentComponent /> */}
+  //   {/* <BioProvider >
+  //   <Home />
+  //   <About />
+  //   <Services />
+  //   </BioProvider> */}
+  // {/* <ThemeProvider >
+  // <DarkLight />
+  // </ThemeProvider > */}
+  // {/* <ReducerComp /> */}
+  // {/* <ReactMemo /> */}
+  // {/* <MemoParentComponent /> */}
+  // {/* <UseCallback /> */}
+  //   </section>
 };
 
-  // return (
-    // parent tag is neeed
-    // <div>  this i extra div
-    // <React.Fragment></React.Fragment><Fragment></Fragment>  this type also we call fragment it used deleted extra nodes
-    // <>
-      //  {/* <Header /> */}
-      // {/* <Netflixseries /> */}
-      // {/* // */}
-      // {/* <Netflixseries /> */}
-      // {/* // */}
-      // {/* <Netflixseries /> */}
-      // {/*  */}
-      // {/* <Netflixseries /> */}
-      // {/* */}
-      // {/* <Netflixseries /> */}
-      // {/* 0<Footer /> */}
-    // </>
-    // </div>  this i extra div'
-  // );
+// return (
+// parent tag is neeed
+// <div>  this i extra div
+// <React.Fragment></React.Fragment><Fragment></Fragment>  this type also we call fragment it used deleted extra nodes
+// <>
+//  {/* <Header /> */}
+// {/* <Netflixseries /> */}
+// {/* // */}
+// {/* <Netflixseries /> */}
+// {/* // */}
+// {/* <Netflixseries /> */}
+// {/*  */}
+// {/* <Netflixseries /> */}
+// {/* */}
+// {/* <Netflixseries /> */}
+// {/* 0<Footer /> */}
+// </>
+// </div>  this i extra div'
+// );
 // }; // react code
 
-// function Sibling () 
+// function Sibling ()
 // {
 //     console.log("Sibling Component rendered");
 //     return <div className='main-div'>
