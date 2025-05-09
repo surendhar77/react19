@@ -45,7 +45,7 @@
 // import { DarkLight } from "./components/hooks/ContextAPI/DarkLight";
 // import { ReducerComp } from "./components/hooks/UseReducer";
 
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from "react-router-dom";
+import { createBrowserRouter , RouterProvider } from "react-router-dom";
 import {Home} from "./ReactRouter/Pages/Home";
 import About from "./ReactRouter/Pages/About";
 import {Movie} from "./ReactRouter/Pages/Movie";
@@ -53,7 +53,8 @@ import {Contact} from "./ReactRouter/Pages/Contact";
 import AppLayout from "./ReactRouter/Pages/layout/AppLayout";
 import "./ReactRouter/css/index.css";
 import {ErrorPage} from "./ReactRouter/Pages/ErrorPage"
-import { NotFound } from "./ReactRouter/Pages/NotFound";
+// import { NotFound } from "./ReactRouter/Pages/NotFound";
+import { getMoviesData } from "./api/GetApiData";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -72,7 +73,9 @@ const App = () => {
       },
       {
         path:"/movie",
-        element:<Movie />
+        element:<Movie />,
+        loader:getMoviesData,        
+
       },   {
         path:"/contact",
         element:<Contact />
