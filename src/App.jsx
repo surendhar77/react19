@@ -49,12 +49,15 @@ import { createBrowserRouter , RouterProvider } from "react-router-dom";
 import {Home} from "./ReactRouter/Pages/Home";
 import About from "./ReactRouter/Pages/About";
 import {Movie} from "./ReactRouter/Pages/Movie";
-import {Contact} from "./ReactRouter/Pages/Contact";
+import {Contact, contactData} from "./ReactRouter/Pages/Contact";
 import AppLayout from "./ReactRouter/Pages/layout/AppLayout";
 import "./ReactRouter/css/index.css";
 import {ErrorPage} from "./ReactRouter/Pages/ErrorPage"
 // import { NotFound } from "./ReactRouter/Pages/NotFound";
 import { getMoviesData } from "./api/GetApiData";
+import { MovieDetails } from "./components/UI/MovieDetails";
+import { getMovieDetails } from "./api/GetMovieDetails";
+
 
 const App = () => {
   const router = createBrowserRouter([
@@ -75,10 +78,16 @@ const App = () => {
         path:"/movie",
         element:<Movie />,
         loader:getMoviesData,        
-
-      },   {
+      },  
+       {
+        path:"/movie/:movieId",
+        element: <MovieDetails />,
+        loader:getMovieDetails,
+      },  
+       {
         path:"/contact",
-        element:<Contact />
+        element:<Contact />,
+        action:contactData,
       },
       // {
       //   path:"*",
