@@ -56,11 +56,22 @@
 // import { MovieDetails } from "./components/UI/MovieDetails";
 // import { getMovieDetails } from "./api/GetMovieDetails";
 
-import { AxiosMovie } from "./axios/pages/Movie";
-
+// import { AxiosMovie } from "./axios/pages/Movie";
+import { useEffect } from "react";
+import {getPost} from "./full_stack_with_axios/PostApi"
 
 const App = () => {
-return (<AxiosMovie />);
+  console.log(getPost());
+  const getPostData = async() => {
+    const res = await getPost();
+    console.log(res);
+  }
+  useEffect (() => {
+    getPostData();
+  },[]);
+return (<>
+<h1>Hello React Crud Operations </h1>
+</>);
 };
 
 // react route provider
