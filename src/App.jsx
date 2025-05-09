@@ -15,7 +15,6 @@
 // import EventHandling from "./components/EventHandling"
 // import EventProps from "./components/EventProps"
 // console.log("✅ This will appear in the browser console");
-//
 // console.log(React.createElement("h1",null,"Hello Surendhar."));  // js code
 // import ShortCircuit from "./components/hooks/ShortCircuit";
 //  import {Counter } from "./components/hooks/useState";
@@ -44,60 +43,65 @@
 // import { ThemeProvider } from "./components/hooks/ContextAPI/DarkLight";
 // import { DarkLight } from "./components/hooks/ContextAPI/DarkLight";
 // import { ReducerComp } from "./components/hooks/UseReducer";
-
-import { createBrowserRouter , RouterProvider } from "react-router-dom";
-import {Home} from "./ReactRouter/Pages/Home";
-import About from "./ReactRouter/Pages/About";
-import {Movie} from "./ReactRouter/Pages/Movie";
-import {Contact, contactData} from "./ReactRouter/Pages/Contact";
-import AppLayout from "./ReactRouter/Pages/layout/AppLayout";
-import "./ReactRouter/css/index.css";
-import {ErrorPage} from "./ReactRouter/Pages/ErrorPage"
+// import { createBrowserRouter , RouterProvider } from "react-router-dom";
+// import {Home} from "./ReactRouter/Pages/Home";
+// import About from "./ReactRouter/Pages/About";
+// import {Movie} from "./ReactRouter/Pages/Movie";
+// import {Contact, contactData} from "./ReactRouter/Pages/Contact";
+// import AppLayout from "./ReactRouter/Pages/layout/AppLayout";
+// import "./ReactRouter/css/index.css";
+// import {ErrorPage} from "./ReactRouter/Pages/ErrorPage"
 // import { NotFound } from "./ReactRouter/Pages/NotFound";
-import { getMoviesData } from "./api/GetApiData";
-import { MovieDetails } from "./components/UI/MovieDetails";
-import { getMovieDetails } from "./api/GetMovieDetails";
+// import { getMoviesData } from "./api/GetApiData";
+// import { MovieDetails } from "./components/UI/MovieDetails";
+// import { getMovieDetails } from "./api/GetMovieDetails";
+
+import { AxiosMovie } from "./axios/pages/Movie";
 
 
 const App = () => {
-  const router = createBrowserRouter([
-  {
-    path:'/',
-    element:<AppLayout />,
-    errorElement:<ErrorPage />,
-    children:[
-      {
-        path:"/",
-        element:<Home/>
-      },
-      {
-        path:"/about",
-        element:<About />
-      },
-      {
-        path:"/movie",
-        element:<Movie />,
-        loader:getMoviesData,        
-      },  
-       {
-        path:"/movie/:movieId",
-        element: <MovieDetails />,
-        loader:getMovieDetails,
-      },  
-       {
-        path:"/contact",
-        element:<Contact />,
-        action:contactData,
-      },
-      // {
-      //   path:"*",
-      //   element:<NotFound />
-      // },
-    ]
-  },
+return (<AxiosMovie />);
+};
+
+// react route provider
+//   const router = createBrowserRouter([
+//   {
+//     path:'/',
+//     element:<AppLayout />,
+//     errorElement:<ErrorPage />,
+//     children:[
+//       {
+//         path:"/",
+//         element:<Home/>
+//       },
+//       {
+//         path:"/about",
+//         element:<About />
+//       },
+//       {
+//         path:"/movie",
+//         element:<Movie />,
+//         loader:getMoviesData,        
+//       },  
+//        {
+//         path:"/movie/:movieId",
+//         element: <MovieDetails />,
+//         loader:getMovieDetails,
+//       },  
+//        {
+//         path:"/contact",
+//         element:<Contact />,
+//         action:contactData,
+//       },
+//       // {
+//       //   path:"*",
+//       //   element:<NotFound />
+//       // },
+//     ]
+//   },
      
-]);
-  return <RouterProvider router ={router} />
+// ]);
+  // return <RouterProvider router ={router} />
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -154,7 +158,6 @@ const App = () => {
   // {/* <MemoParentComponent /> */}
   // {/* <UseCallback /> */}
   //   </section>
-};
 
 // return (
 // parent tag is neeed
