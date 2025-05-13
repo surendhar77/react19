@@ -300,3 +300,42 @@ Toggle the Theme:
 Attach the toggleTheme function to a button's onClick event. This allows the user to switch between light and dark modes by clicking the button.
 
 react-19-series-thapa-technical/src/source.md at master · thapatechnical/react-19-series-thapa-technical 
+
+Create the Parent Accordion Component:
+
+Import necessary hooks: Use useState and useEffect from React to manage state and effects.
+Fetch FAQ data: Import your faq.json file or use sample data for the FAQ.
+State for tracking the active FAQ: Create a state variable activeId using useState(null). This will store the ID of the currently active (opened) FAQ.
+Function to toggle FAQ: Create a function handleToggle(id) that will:
+If the clicked FAQ is already open, close it by setting activeId to null.
+If another FAQ is clicked, open it by setting activeId to that FAQ’s ID.
+Pass Data to the FAQ Component:
+
+In the parent Accordion component, loop through the FAQ data using map().
+For each FAQ, pass down:
+The data (curData) for the current FAQ.
+The current activeId to determine if the FAQ should be open or closed.
+A function onToggle to handle when the FAQ is clicked.
+Build the Child FAQ Component:
+
+Props: Accept the curData, isActive, and onToggle as props.
+Display FAQ Question: Show the question for the FAQ.
+Toggle Button: Create a button that calls onToggle when clicked, toggling between "Show" and "Close".
+Conditionally Show Answer: Use the isActive prop to determine if the answer should be visible. If isActive is true, display the answer; otherwise, keep it hidden.
+Final Integration:
+
+When a user clicks on an FAQ question, it toggles between open and closed.
+Only one FAQ can be open at a time. If another FAQ is clicked, the previous one will close automatically.
+Visual Overview of the Logic:
+Parent Accordion Component:
+
+Holds all FAQ data.
+Manages the state of which FAQ is active.
+Passes down data and functions to control the behavior of each FAQ.
+Child FAQ Component:
+
+Receives individual FAQ data.
+Knows if it's active based on the state from the parent.
+Toggles its own state to show or hide the answer.
+Bonus:
+The code is structured to be reusable. You can easily add more FAQs by just updating the data, and the component will handle it automatically.

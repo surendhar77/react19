@@ -58,14 +58,18 @@
 // import { AxiosMovie } from "./axios/pages/Movie";
 // import { useEffect } from "react";
 // import {getPost} from "./full_stack_with_axios/PostApi"
-import Posts from "./crud/Posts";
-import "./crud/crud.css"
+// import Posts from "./crud/Posts";
+// import "./crud/crud.css"
+
+import Accordion from "./components/Accordion/Accordion";
+
 const App = () => {
   return (
-    <section className="main-section">
-        <Posts />
-    </section>
-  
+    // <section className="main-section">
+    //     {/* <Posts /> */}
+    // </section>
+    <Accordion />
+
   )
 };
 
@@ -118,9 +122,9 @@ const App = () => {
 //       // },
 //     ]
 //   },
-     
+
 // ]);
-  // return <RouterProvider router ={router} />
+// return <RouterProvider router ={router} />
 
 // const router = createBrowserRouter(
 //   createRoutesFromElements(
@@ -134,49 +138,49 @@ const App = () => {
 //   )
 // );
 // return <RouterProvider router ={router} />
-    // React components and hooks
-  //   return <section className="container">
-  //     {/* <h1 className="card-heading"> List of Best Netflix Series</h1> */}
-  //   {/* <Netflixseries />   */}
-  //   {/* <EventHandling /> */}
-  //   {/* < EventProps  /> */}
-  //   {/* <EventPropagation  /> */}
-  //   {/* <State  /> */}
-  //   {/* <DerivedState /> */}
-  //   {/* <Sibling /> */}
-  //   {/* <LiftStateUp /> */}
-  //   {/* <ToggleSwitch /> */}
-  //   {/* <Todo /> */}
-  //   {/* <Keys /> */}
-  //   {/* <ShortCircuit /> */}
-  //   {/* <Counter />  */}
-  //   {/* <ControlledForm /> */}
-  //   {/* <RegistrationForm /> */}
-  //   {/* <RegistrationFormReact /> */}
-  //   {/* <LoginForm /> */}
-  //   {/* <ContactForm /> */}
-  //   {/* <ReactUseEffect />  */}
-  //   {/* <Challenge /> */}
-  //   {/* <CleanUp /> */}
-  //   {/* <HowNotToFetchApi />   */}
-  //   {/* <HarryPotterCharacter /> */}
-  //   {/* <UseRef />  */}
-  //   {/* <ForwardRefs /> */}
-  //   {/* <UseId /> */}
-  //   {/* <ParentComponent /> */}
-  //   {/* <BioProvider >
-  //   <Home />
-  //   <About />
-  //   <Services />
-  //   </BioProvider> */}
-  // {/* <ThemeProvider >
-  // <DarkLight />
-  // </ThemeProvider > */}
-  // {/* <ReducerComp /> */}
-  // {/* <ReactMemo /> */}
-  // {/* <MemoParentComponent /> */}
-  // {/* <UseCallback /> */}
-  //   </section>
+// React components and hooks
+//   return <section className="container">
+//     {/* <h1 className="card-heading"> List of Best Netflix Series</h1> */}
+//   {/* <Netflixseries />   */}
+//   {/* <EventHandling /> */}
+//   {/* < EventProps  /> */}
+//   {/* <EventPropagation  /> */}
+//   {/* <State  /> */}
+//   {/* <DerivedState /> */}
+//   {/* <Sibling /> */}
+//   {/* <LiftStateUp /> */}
+//   {/* <ToggleSwitch /> */}
+//   {/* <Todo /> */}
+//   {/* <Keys /> */}
+//   {/* <ShortCircuit /> */}
+//   {/* <Counter />  */}
+//   {/* <ControlledForm /> */}
+//   {/* <RegistrationForm /> */}
+//   {/* <RegistrationFormReact /> */}
+//   {/* <LoginForm /> */}
+//   {/* <ContactForm /> */}
+//   {/* <ReactUseEffect />  */}
+//   {/* <Challenge /> */}
+//   {/* <CleanUp /> */}
+//   {/* <HowNotToFetchApi />   */}
+//   {/* <HarryPotterCharacter /> */}
+//   {/* <UseRef />  */}
+//   {/* <ForwardRefs /> */}
+//   {/* <UseId /> */}
+//   {/* <ParentComponent /> */}
+//   {/* <BioProvider >
+//   <Home />
+//   <About />
+//   <Services />
+//   </BioProvider> */}
+// {/* <ThemeProvider >
+// <DarkLight />
+// </ThemeProvider > */}
+// {/* <ReducerComp /> */}
+// {/* <ReactMemo /> */}
+// {/* <MemoParentComponent /> */}
+// {/* <UseCallback /> */}
+//   </section>
 
 // return (
 // parent tag is neeed
