@@ -61,14 +61,23 @@
 // import Posts from "./crud/Posts";
 // import "./crud/crud.css"
 
-import Accordion from "./components/Accordion/Accordion";
+import HeroSection from "./components/Navbar/HeroSection";
+import Navbar from "./components/Navbar/Navbar";
+import "../src/components/Navbar/index.css"
+
+// import Accordion from "./components/Accordion/Accordion";
 
 const App = () => {
   return (
     // <section className="main-section">
     //     {/* <Posts /> */}
     // </section>
-    <Accordion />
+    // <Accordion />,
+    <>
+      <Navbar />
+      <HeroSection />
+    </>
+
 
   )
 };
