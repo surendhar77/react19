@@ -1,0 +1,17 @@
+[
+    {
+        "icon" : "MdPlace",
+        "title" : "Find us",
+        "details" : "Erode,TamilNadu"
+    },
+       {
+        "icon" : "IoCafeSharp",
+        "title" : "Call us",
+        "details" : "7010926691"
+    },
+       {
+        "icon" : "TbMailPlus",
+        "title" : "Mail us",
+        "details" : "sjs@gmail.com"
+    }
+]

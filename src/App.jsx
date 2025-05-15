@@ -64,6 +64,7 @@
 import HeroSection from "./components/Navbar/HeroSection";
 import Navbar from "./components/Navbar/Navbar";
 import "../src/components/Navbar/index.css"
+import Footer from "./components/DynamicContact/Footer";
 
 // import Accordion from "./components/Accordion/Accordion";
 
@@ -76,6 +77,7 @@ const App = () => {
     <>
       <Navbar />
       <HeroSection />
+      <Footer />
     </>
 
 
